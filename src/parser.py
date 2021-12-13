@@ -1,6 +1,7 @@
 from functions import *
 from keys import *
 import sys
+import functions
 
 if len(sys.argv) == 1:
     print("Usage: ./parser.py <path>")
@@ -16,11 +17,22 @@ with open(file_path, 'r') as f:
 
 #print(*code, sep="\n")
 
+code_ = []
+
 for line in code:
     tmp = line.replace(" ", "")
     if tmp.startswith("#"):
         del tmp
         continue
-    if line.startswith('LOG'):
-        print(line.split('(')[1].split(')')[0].replace("'", "").replace('"', ''))
-        
+    line_ = []
+    for letter in line:
+        if letter == ' ':
+            letter = ''
+        line_.append(letter)
+    code_.append(line_)
+
+del line_
+code = code_
+del code_
+
+print(*code, sep="\n")
