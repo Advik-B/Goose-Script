@@ -145,6 +145,8 @@ WAIT 5s #  wait 5 seconds
         KEYPRESS - key press ie:
             ctrl+a
         
+        RELEASE_ALL - releases all keys
+
         Mouse:
             comming soon!
 

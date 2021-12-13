@@ -74,3 +74,6 @@ def OPEN(path):
 
 def KEYPRESS(keys):
     keyboard.press_and_release(keys)
+
+def RELEASE_ALL():
+    keyboard.remove_all_hotkeys()
