@@ -101,4 +101,47 @@ WAIT 5s #  wait 5 seconds
             DEL - delete
             FN - function key
 
+            NOTE: The key names are case sensitive. and thease are key presses.
+
+            Key Releases:
+
+            ESC_ - escape
+            BACKSPACE_ - backspace
+            TAB_ - tab
+            CTRL_ - control
+            SHIFT_ - shift
+            SUPER_ - super (windows key) or command key
+            ALT_ - alt (option key)
+            CAPS_ - caps lock
+            ENTER_ - enter (return key)
+            PAGEUP_ - page up
+            PAGEDOWN_ - page down
+            END_ - end
+            HOME_ - home
+            LEFT_ - left arrow
+            UP_ - up arrow
+            RIGHT_ - right arrow
+            DOWN_ - down arrow
+            NUM_LOCK_ - num lock
+            
+            F1_ - F1
+            F2_ - F2
+            F3_ - F3
+            F4_ - F4
+            F5_ - F5
+            F6_ - F6
+            F7_ - F7
+            F8_ - F8
+            F9_ - F9
+            F10_ - F10
+            F11_ - F11
+            F12_ - F12
+
+            INSERT_ - insert
+            DEL_ - delete
+            FN_ - function key
+        
+        Mouse:
+            comming soon!
+
 #*
