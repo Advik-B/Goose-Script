@@ -151,3 +151,4 @@ WAIT 5s #  wait 5 seconds
             comming soon!
 
 #*
+LOG(GETCWD())
