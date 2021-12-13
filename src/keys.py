@@ -18,9 +18,6 @@ def SHIFT():
 def SUPER():
     keyboard.press_and_release('win')
 
-def SPACE():
-    keyboard.press_and_release('space')
-
 def PAGEUP():
     keyboard.press_and_release('pageup')
 
