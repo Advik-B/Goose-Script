@@ -140,6 +140,10 @@ WAIT 5s #  wait 5 seconds
             INSERT_ - insert
             DEL_ - delete
             FN_ - function key
+            
+            
+        KEYPRESS - key press ie:
+            ctrl+a
         
         Mouse:
             comming soon!

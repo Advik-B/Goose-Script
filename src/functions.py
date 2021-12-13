@@ -71,3 +71,6 @@ def KP(keys):
 
 def OPEN(path):
     os.startfile(path)
+
+def KEYPRESS(keys):
+    keyboard.press_and_release(keys)
