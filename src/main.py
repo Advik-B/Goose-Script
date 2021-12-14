@@ -11,8 +11,12 @@ from keys import *
 <code>
 """
 
-with open(sys.argv[1], 'r') as f:
-    code = f.read()
+try:
+    with open(sys.argv[1], 'r') as f:
+        code = f.read()
+except FileNotFoundError:
+    print(colored("File not found:", "red"), colored(sys.argv[1], "yellow"))
+    sys.exit(-1)
 
 code = boilerplate.replace('<code>', code)
 
