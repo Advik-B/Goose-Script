@@ -38,5 +38,5 @@ Line: {asda}
 Where: {colored(ee, 'cyan')}
     """
     print(msg)
-    del tb, asd, ee, type_, msg
+    del tb, asd, ee, type_, msg, asda
     sys.exit(1)
