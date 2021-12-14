@@ -1,31 +1,31 @@
 import sys
-import functions
-import keys
 
-if len(sys.argv) == 1:
-    print("Usage: ./parser.py <path>")
-    sys.exit(1)
+if len(sys.argv) < 2:
+    print("Usage: gooz <path>")
+    sys.exit(0)
 
-file_path = sys.argv[1]
+boilerplate = """
+from functions import *
+from keys import *
+<code>
+"""
 
-code = []
+with open(sys.argv[1], 'r') as f:
+    code = f.read()
 
-with open(file_path, 'r') as f:
-    for line in f.readlines():
-        code.append(line)
-
-code2 = []
-for line in code:
-    raw = line.replace(' ', '').replace('	', '')
-    if raw.startswith('#') and not raw.startswith('#*'):
+ad = True
+code_ = []
+for line in code.splitlines():
+    if line.startswith('#'):
         continue
-    if raw.startswith('\n'):
+    if line.startswith('#*'):
+        ad = False
         continue
+    if line.startswith('#*') and not ad:
+        ad = True
+        continue
+    if not ad:
+        continue
+    code_.append(line)
 
-    code2.append(line)
-
-code.clear()
-code.extend(code2)
-code2.clear()
-
-print(*code, sep='\n')
+print(*code_, sep='\n')
