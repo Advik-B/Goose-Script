@@ -4,18 +4,14 @@ from PyInstaller.utils.hooks import collect_all
 datas = []
 binaries = []
 hiddenimports = []
-tmp_ret = collect_all('keyboard')
-datas += tmp_ret[0]; binaries += tmp_ret[1]; hiddenimports += tmp_ret[2]
-tmp_ret = collect_all('send2trash')
-datas += tmp_ret[0]; binaries += tmp_ret[1]; hiddenimports += tmp_ret[2]
-tmp_ret = collect_all('termcolor')
+tmp_ret = collect_all('[keyboard,')
 datas += tmp_ret[0]; binaries += tmp_ret[1]; hiddenimports += tmp_ret[2]
 
 
 block_cipher = None
 
 
-a = Analysis(['main.py'],
+a = Analysis(['send2trash,', 'termcolor]', 'main.py'],
              pathex=[],
              binaries=binaries,
              datas=datas,
@@ -35,7 +31,7 @@ exe = EXE(pyz,
           a.scripts, 
           [],
           exclude_binaries=True,
-          name='main',
+          name='send2trash,',
           debug=False,
           bootloader_ignore_signals=False,
           strip=False,
@@ -52,4 +48,4 @@ coll = COLLECT(exe,
                strip=False,
                upx=True,
                upx_exclude=[],
-               name='main')
+               name='send2trash,')
