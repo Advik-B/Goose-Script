@@ -1,5 +1,0 @@
-# This is Gooz-Script
-LOG('Taking screenshot...')
-KEYPRESS('win+shift+s')
-LOG('Done!')
-EXIT()
